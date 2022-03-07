@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<STUDY_SET>
+<STUDY accession="ERP009741" alias="ena-STUDY-SC-05-03-2015-14:30:47:416-105" center_name="Wellcome Sanger Institute">
+     <IDENTIFIERS>
+          <PRIMARY_ID>ERP009741</PRIMARY_ID>
+          <SECONDARY_ID>PRJEB8717</SECONDARY_ID>
+          <SUBMITTER_ID namespace="SC">ena-STUDY-SC-05-03-2015-14:30:47:416-105</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <DESCRIPTOR>
+          <STUDY_TITLE>Accumulation of human-adapting mutations during circulation of A(H1N1)pdm09 influenza virus in humans in the United Kingdom.</STUDY_TITLE>
+          <STUDY_ABSTRACT>The influenza pandemic that emerged in 2009 provided an unprecedented opportunity to study adaptation of a virus recently acquired from an animal source during human transmission. In the United Kingdom, the novel virus spread in three temporally distinct waves between 2009 and 2011. Phylogenetic analysis of complete viral genomes showed that mutations accumulated over time. Second- and third-wave viruses replicated more rapidly in human airway epithelial (HAE) cells than did the first-wave virus. In infected mice, weight loss varied between viral isolates from the same wave but showed no distinct pattern with wave and did not correlate with viral load in the mouse lungs or severity of disease in the human donor. However, second- and third-wave viruses induced less alpha interferon in the infected mouse lungs. NS1 protein, an interferon antagonist, had accumulated several mutations in second- and third-wave viruses. Recombinant viruses with the third-wave NS gene induced less interferon in human cells, but this alone did not account for increased virus fitness in HAE cells. Mutations in HA and NA genes in third-wave viruses caused increased binding to α-2,6-sialic acid and enhanced infectivity in human mucus. A recombinant virus with these two segments replicated more efficiently in HAE cells. A mutation in PA (N321K) enhanced polymerase activity of third-wave viruses and also provided a replicative advantage in HAE cells. Therefore, multiple mutations allowed incremental changes in viral fitness, which together may have contributed to the apparent increase in severity of A(H1N1)pdm09 influenza virus during successive waves.</STUDY_ABSTRACT>
+          <STUDY_DESCRIPTION>The influenza pandemic that emerged in 2009 provided an unprecedented opportunity to study adaptation of a virus recently acquired from an animal source during human transmission. In the United Kingdom, the novel virus spread in three temporally distinct waves between 2009 and 2011. Phylogenetic analysis of complete viral genomes showed that mutations accumulated over time. Second- and third-wave viruses replicated more rapidly in human airway epithelial (HAE) cells than did the first-wave virus. In infected mice, weight loss varied between viral isolates from the same wave but showed no distinct pattern with wave and did not correlate with viral load in the mouse lungs or severity of disease in the human donor. However, second- and third-wave viruses induced less alpha interferon in the infected mouse lungs. NS1 protein, an interferon antagonist, had accumulated several mutations in second- and third-wave viruses. Recombinant viruses with the third-wave NS gene induced less interferon in human cells, but this alone did not account for increased virus fitness in HAE cells. Mutations in HA and NA genes in third-wave viruses caused increased binding to α-2,6-sialic acid and enhanced infectivity in human mucus. A recombinant virus with these two segments replicated more efficiently in HAE cells. A mutation in PA (N321K) enhanced polymerase activity of third-wave viruses and also provided a replicative advantage in HAE cells. Therefore, multiple mutations allowed incremental changes in viral fitness, which together may have contributed to the apparent increase in severity of A(H1N1)pdm09 influenza virus during successive waves.</STUDY_DESCRIPTION>
+          <CENTER_PROJECT_NAME>Influenza virus in humans</CENTER_PROJECT_NAME>
+          <STUDY_TYPE existing_study_type="Other"/>
+     </DESCRIPTOR>
+     <STUDY_LINKS>
+          <STUDY_LINK>
+               <XREF_LINK>
+                    <DB>PUBMED</DB>
+                    <ID>25210166</ID>
+               </XREF_LINK>
+          </STUDY_LINK>
+          <STUDY_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>ERA416012</ID>
+               </XREF_LINK>
+          </STUDY_LINK>
+          <STUDY_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID><![CDATA[https://www.ebi.ac.uk/ena/portal/api/filereport?accession=ERP009741&result=read_run&fields=run_accession,fastq_ftp,fastq_md5,fastq_bytes]]></ID>
+               </XREF_LINK>
+          </STUDY_LINK>
+          <STUDY_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID><![CDATA[https://www.ebi.ac.uk/ena/portal/api/filereport?accession=ERP009741&result=read_run&fields=run_accession,submitted_ftp,submitted_md5,submitted_bytes,submitted_format]]></ID>
+               </XREF_LINK>
+          </STUDY_LINK>
+     </STUDY_LINKS>
+     <STUDY_ATTRIBUTES>
+          <STUDY_ATTRIBUTE>
+               <TAG>ENA-FIRST-PUBLIC</TAG>
+               <VALUE>2015-03-18</VALUE>
+          </STUDY_ATTRIBUTE>
+          <STUDY_ATTRIBUTE>
+               <TAG>ENA-LAST-UPDATE</TAG>
+               <VALUE>2015-03-05</VALUE>
+          </STUDY_ATTRIBUTE>
+     </STUDY_ATTRIBUTES>
+</STUDY>
+</STUDY_SET>

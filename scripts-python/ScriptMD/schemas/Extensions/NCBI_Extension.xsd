@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:mpeg:mpeg-g:metadata:extension:ncbi" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:mpeg:mpeg-g:metadata:extension:ncbi" xmlns:com="SP.common">
+    <xs:import schemaLocation="https://www.ncbi.nlm.nih.gov/viewvc/v1/trunk/submit/public-docs/common/SP.common.xsd?view=co" namespace="SP.common"/>
+    
+    <xs:complexType name="AttributeExtensionType">
+        <xs:sequence>
+            <xs:element name="StudyDesign" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="BodySite" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="AnalyteType" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="IsTumor" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="IDExtensionType">
+        <xs:sequence>
+            <xs:element name="SampleName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="OrganismExtensionType">
+        <xs:sequence>
+            <xs:element name="Label" minOccurs="0" maxOccurs="1" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation> A label for sample, or name of an individual animal (e.g., Clint).</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="Strain" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Microbial/eukaryotic strain name.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="IsolateName" minOccurs="0" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Identification or description of the specific individual from which this sample was obtained.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="Breed" minOccurs="0" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Breed name - chiefly used in domesticated animals or plants.</xs:documentation>
+                </xs:annotation> 
+            </xs:element>
+            <xs:element name="Cultivar" minOccurs="0" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Cultivar name - cultivated variety of plant.</xs:documentation>
+                </xs:annotation> 
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="OrganizationExtensionType">
+        <xs:sequence>
+            <xs:element name="Organization" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:element name="AttributeExtension" type="tns:AttributeExtensionType"/>
+    <xs:element name="OrganismExtension" type="tns:OrganismExtensionType"/>
+    <xs:element name="OrganizationExtension" type="tns:OrganizationExtensionType"/>
+    <xs:element name="IDExtension" type="tns:IDExtensionType"/>
+</xs:schema>

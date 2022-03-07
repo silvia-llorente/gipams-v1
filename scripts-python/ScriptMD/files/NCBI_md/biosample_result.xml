@@ -1,0 +1,146 @@
+<BioSampleSet>
+    <BioSample access="controlled-access" publication_date="2015-10-27T01:01:36.767" last_update="2018-04-11T03:19:48.440" submission_date="2015-10-27T01:01:36.767" id="4216866" accession="SAMN04216866">
+        <Ids>
+            <Id db="BioSample" is_primary="1">SAMN04216866</Id>
+            <Id db="dbGaP" db_label="Sample name" is_hidden="1">710-HG00154</Id>
+            <Id db="SRA">SRS1153259</Id>
+        </Ids>
+        <Description>
+            <Title>Non-tumor RNA sample from Lymphoblastoid cell line of a human participant in the dbGaP study "1000 Genomes Used for Cloud Testing"</Title>
+            <Organism taxonomy_id="9606" taxonomy_name="Homo sapiens" />
+        </Description>
+        <Owner>
+            <Name abbreviation="NCBI" />
+        </Owner>
+        <Models>
+            <Model>Generic</Model>
+        </Models>
+        <Package display_name="Generic">Generic.1.0</Package>
+        <Attributes>
+            <Attribute attribute_name="gap_accession" harmonized_name="gap_accession" display_name="gap accession">phs000710</Attribute>
+            <Attribute attribute_name="submitter handle" harmonized_name="submitter_handle" display_name="submitter handle">Cloud Testing</Attribute>
+            <Attribute attribute_name="biospecimen repository" harmonized_name="biospecimen_repository" display_name="biospecimen repository">Cloud Testing</Attribute>
+            <Attribute attribute_name="study name" harmonized_name="study_name" display_name="study name">1000 Genomes Used for Cloud Testing</Attribute>
+            <Attribute attribute_name="study design" harmonized_name="study_design" display_name="study design">Cross-Sectional</Attribute>
+            <Attribute attribute_name="biospecimen repository sample id" harmonized_name="biospecimen_repository_sample_id" display_name="biospecimen repository sample id">HG00154</Attribute>
+            <Attribute attribute_name="submitted sample id" harmonized_name="submitted_sample_id" display_name="submitted sample id">HG00154</Attribute>
+            <Attribute attribute_name="submitted subject id" harmonized_name="submitted_subject_id" display_name="submitted subject id">HG00154</Attribute>
+            <Attribute attribute_name="gap_sample_id" harmonized_name="gap_sample_id" display_name="gap sample id">1820605</Attribute>
+            <Attribute attribute_name="gap_subject_id" harmonized_name="gap_subject_id" display_name="gap subject id">1374991</Attribute>
+            <Attribute attribute_name="body site" harmonized_name="tissue" display_name="tissue">Lymphoblastoid cell line</Attribute>
+            <Attribute attribute_name="analyte type" harmonized_name="analyte_type" display_name="analyte type">RNA</Attribute>
+            <Attribute attribute_name="is tumor" harmonized_name="is_tumor" display_name="is tumor">No</Attribute>
+            <Attribute attribute_name="gap_consent_code" harmonized_name="gap_consent_code" display_name="gap consent code">99</Attribute>
+            <Attribute attribute_name="gap_consent_short_name" harmonized_name="gap_consent_short_name" display_name="gap consent short name">UR</Attribute>
+        </Attributes>
+        <Status status="live" when="2018-04-11T01:51:40" />
+    </BioSample>
+    <BioSample access="controlled-access" publication_date="2015-10-27T01:01:36.307" last_update="2018-04-11T03:19:48.337" submission_date="2015-10-27T01:01:36.307" id="4216863" accession="SAMN04216863">
+        <Ids>
+            <Id db="BioSample" is_primary="1">SAMN04216863</Id>
+            <Id db="dbGaP" db_label="Sample name" is_hidden="1">710-NA18910</Id>
+            <Id db="SRA">SRS1153256</Id>
+        </Ids>
+        <Description>
+            <Title>Non-tumor RNA sample from Lymphoblastoid cell line of a human participant in the dbGaP study "1000 Genomes Used for Cloud Testing"</Title>
+            <Organism taxonomy_id="9606" taxonomy_name="Homo sapiens" />
+        </Description>
+        <Owner>
+            <Name abbreviation="NCBI" />
+        </Owner>
+        <Models>
+            <Model>Generic</Model>
+        </Models>
+        <Package display_name="Generic">Generic.1.0</Package>
+        <Attributes>
+            <Attribute attribute_name="gap_accession" harmonized_name="gap_accession" display_name="gap accession">phs000710</Attribute>
+            <Attribute attribute_name="submitter handle" harmonized_name="submitter_handle" display_name="submitter handle">Cloud Testing</Attribute>
+            <Attribute attribute_name="biospecimen repository" harmonized_name="biospecimen_repository" display_name="biospecimen repository">Cloud Testing</Attribute>
+            <Attribute attribute_name="study name" harmonized_name="study_name" display_name="study name">1000 Genomes Used for Cloud Testing</Attribute>
+            <Attribute attribute_name="study design" harmonized_name="study_design" display_name="study design">Cross-Sectional</Attribute>
+            <Attribute attribute_name="biospecimen repository sample id" harmonized_name="biospecimen_repository_sample_id" display_name="biospecimen repository sample id">NA18910</Attribute>
+            <Attribute attribute_name="submitted sample id" harmonized_name="submitted_sample_id" display_name="submitted sample id">NA18910</Attribute>
+            <Attribute attribute_name="submitted subject id" harmonized_name="submitted_subject_id" display_name="submitted subject id">NA18910</Attribute>
+            <Attribute attribute_name="gap_sample_id" harmonized_name="gap_sample_id" display_name="gap sample id">1820606</Attribute>
+            <Attribute attribute_name="gap_subject_id" harmonized_name="gap_subject_id" display_name="gap subject id">1374992</Attribute>
+            <Attribute attribute_name="body site" harmonized_name="tissue" display_name="tissue">Lymphoblastoid cell line</Attribute>
+            <Attribute attribute_name="analyte type" harmonized_name="analyte_type" display_name="analyte type">RNA</Attribute>
+            <Attribute attribute_name="is tumor" harmonized_name="is_tumor" display_name="is tumor">No</Attribute>
+            <Attribute attribute_name="gap_consent_code" harmonized_name="gap_consent_code" display_name="gap consent code">99</Attribute>
+            <Attribute attribute_name="gap_consent_short_name" harmonized_name="gap_consent_short_name" display_name="gap consent short name">UR</Attribute>
+        </Attributes>
+        <Status status="live" when="2018-04-11T01:51:40" />
+    </BioSample>
+    <BioSample access="controlled-access" publication_date="2015-10-27T01:01:36.603" last_update="2018-04-11T03:19:48.373" submission_date="2015-10-27T01:01:36.603" id="4216864" accession="SAMN04216864">
+        <Ids>
+            <Id db="BioSample" is_primary="1">SAMN04216864</Id>
+            <Id db="dbGaP" db_label="Sample name" is_hidden="1">710-HG00103</Id>
+            <Id db="SRA">SRS1153258</Id>
+        </Ids>
+        <Description>
+            <Title>Non-tumor RNA sample from Lymphoblastoid cell line of a human participant in the dbGaP study "1000 Genomes Used for Cloud Testing"</Title>
+            <Organism taxonomy_id="9606" taxonomy_name="Homo sapiens" />
+        </Description>
+        <Owner>
+            <Name abbreviation="NCBI" />
+        </Owner>
+        <Models>
+            <Model>Generic</Model>
+        </Models>
+        <Package display_name="Generic">Generic.1.0</Package>
+        <Attributes>
+            <Attribute attribute_name="gap_accession" harmonized_name="gap_accession" display_name="gap accession">phs000710</Attribute>
+            <Attribute attribute_name="submitter handle" harmonized_name="submitter_handle" display_name="submitter handle">Cloud Testing</Attribute>
+            <Attribute attribute_name="biospecimen repository" harmonized_name="biospecimen_repository" display_name="biospecimen repository">Cloud Testing</Attribute>
+            <Attribute attribute_name="study name" harmonized_name="study_name" display_name="study name">1000 Genomes Used for Cloud Testing</Attribute>
+            <Attribute attribute_name="study design" harmonized_name="study_design" display_name="study design">Cross-Sectional</Attribute>
+            <Attribute attribute_name="biospecimen repository sample id" harmonized_name="biospecimen_repository_sample_id" display_name="biospecimen repository sample id">HG00103</Attribute>
+            <Attribute attribute_name="submitted sample id" harmonized_name="submitted_sample_id" display_name="submitted sample id">HG00103</Attribute>
+            <Attribute attribute_name="submitted subject id" harmonized_name="submitted_subject_id" display_name="submitted subject id">HG00103</Attribute>
+            <Attribute attribute_name="gap_sample_id" harmonized_name="gap_sample_id" display_name="gap sample id">1820604</Attribute>
+            <Attribute attribute_name="gap_subject_id" harmonized_name="gap_subject_id" display_name="gap subject id">1374990</Attribute>
+            <Attribute attribute_name="body site" harmonized_name="tissue" display_name="tissue">Lymphoblastoid cell line</Attribute>
+            <Attribute attribute_name="analyte type" harmonized_name="analyte_type" display_name="analyte type">RNA</Attribute>
+            <Attribute attribute_name="is tumor" harmonized_name="is_tumor" display_name="is tumor">No</Attribute>
+            <Attribute attribute_name="gap_consent_code" harmonized_name="gap_consent_code" display_name="gap consent code">99</Attribute>
+            <Attribute attribute_name="gap_consent_short_name" harmonized_name="gap_consent_short_name" display_name="gap consent short name">UR</Attribute>
+        </Attributes>
+        <Status status="live" when="2018-04-11T01:51:40" />
+    </BioSample>
+    <BioSample access="controlled-access" publication_date="2015-10-27T01:01:36.693" last_update="2018-04-11T03:19:48.407" submission_date="2015-10-27T01:01:36.693" id="4216865" accession="SAMN04216865">
+        <Ids>
+            <Id db="BioSample" is_primary="1">SAMN04216865</Id>
+            <Id db="dbGaP" db_label="Sample name" is_hidden="1">710-NA19200</Id>
+            <Id db="SRA">SRS1153255</Id>
+        </Ids>
+        <Description>
+            <Title>Non-tumor RNA sample from Lymphoblastoid cell line of a human participant in the dbGaP study "1000 Genomes Used for Cloud Testing"</Title>
+            <Organism taxonomy_id="9606" taxonomy_name="Homo sapiens" />
+        </Description>
+        <Owner>
+            <Name abbreviation="NCBI" />
+        </Owner>
+        <Models>
+            <Model>Generic</Model>
+        </Models>
+        <Package display_name="Generic">Generic.1.0</Package>
+        <Attributes>
+            <Attribute attribute_name="gap_accession" harmonized_name="gap_accession" display_name="gap accession">phs000710</Attribute>
+            <Attribute attribute_name="submitter handle" harmonized_name="submitter_handle" display_name="submitter handle">Cloud Testing</Attribute>
+            <Attribute attribute_name="biospecimen repository" harmonized_name="biospecimen_repository" display_name="biospecimen repository">Cloud Testing</Attribute>
+            <Attribute attribute_name="study name" harmonized_name="study_name" display_name="study name">1000 Genomes Used for Cloud Testing</Attribute>
+            <Attribute attribute_name="study design" harmonized_name="study_design" display_name="study design">Cross-Sectional</Attribute>
+            <Attribute attribute_name="biospecimen repository sample id" harmonized_name="biospecimen_repository_sample_id" display_name="biospecimen repository sample id">NA19200</Attribute>
+            <Attribute attribute_name="submitted sample id" harmonized_name="submitted_sample_id" display_name="submitted sample id">NA19200</Attribute>
+            <Attribute attribute_name="submitted subject id" harmonized_name="submitted_subject_id" display_name="submitted subject id">NA19200</Attribute>
+            <Attribute attribute_name="gap_sample_id" harmonized_name="gap_sample_id" display_name="gap sample id">1820607</Attribute>
+            <Attribute attribute_name="gap_subject_id" harmonized_name="gap_subject_id" display_name="gap subject id">1374993</Attribute>
+            <Attribute attribute_name="body site" harmonized_name="tissue" display_name="tissue">Lymphoblastoid cell line</Attribute>
+            <Attribute attribute_name="analyte type" harmonized_name="analyte_type" display_name="analyte type">RNA</Attribute>
+            <Attribute attribute_name="is tumor" harmonized_name="is_tumor" display_name="is tumor">No</Attribute>
+            <Attribute attribute_name="gap_consent_code" harmonized_name="gap_consent_code" display_name="gap consent code">99</Attribute>
+            <Attribute attribute_name="gap_consent_short_name" harmonized_name="gap_consent_short_name" display_name="gap consent short name">UR</Attribute>
+        </Attributes>
+        <Status status="live" when="2018-04-11T01:51:40" />
+    </BioSample>
+</BioSampleSet>

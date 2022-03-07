@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="urn:mpeg:mpeg-g:protection:access-unit:2019"
+    xmlns:aupr="urn:mpeg:mpeg-g:protection:access-unit:2019"
+    xmlns:xacml="urn:oasis:names:tc:xacml:1.0:policy"
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
+    <xs:import namespace="urn:oasis:names:tc:xacml:1.0:policy"
+        schemaLocation="https://docs.oasis-open.org/xacml/3.0/XSD/cs-xacml-schema-policy-01.xsd"/>
+    <xs:import namespace="http://www.w3.org/2000/09/xmldsig#"
+        schemaLocation="https://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd#"/>
+    <xs:complexType name="AccessUnitEncryptionParametersType">
+        <xs:sequence>
+            <xs:element name="wrappedKey" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:base64Binary">
+                            <xs:attribute name="configurationID" type="xs:int" use="required"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="cipher">
+                <xs:simpleType>
+                    <xs:restriction base="xs:anyURI">
+                        <xs:enumeration value="urn:mpeg:mpeg-g:protection:aes128-ctr"/>
+                        <xs:enumeration value="urn:mpeg:mpeg-g:protection:aes192-ctr"/>
+                        <xs:enumeration value="urn:mpeg:mpeg-g:protection:aes256-ctr"/>
+                        <xs:enumeration value="urn:mpeg:mpeg-g:protection:aes128-gcm"/>
+                        <xs:enumeration value="urn:mpeg:mpeg-g:protection:aes192-gcm"/>
+                        <xs:enumeration value="urn:mpeg:mpeg-g:protection:aes256-gcm"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element type="xs:base64Binary" name="aublockIV"/>
+            <xs:element type="xs:base64Binary" name="auinIV" minOccurs="0"/>
+            <xs:element type="xs:base64Binary" name="aublockTAG" minOccurs="0"/>
+            <xs:element type="xs:base64Binary" name="auinTAG" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="SignatureType">
+        <xs:sequence>
+            <xs:element ref="ds:Signature"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="AccessUnitProtectionType">
+        <xs:sequence>
+            <xs:element type="aupr:AccessUnitEncryptionParametersType" name="AccessUnitEncryptionParameters" minOccurs="0" maxOccurs="1"/>
+            <xs:element type="aupr:SignatureType" name="SignatureParameters" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="AccessUnitProtection" type="aupr:AccessUnitProtectionType"/>
+</xs:schema>

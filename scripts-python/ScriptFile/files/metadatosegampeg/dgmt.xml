@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:DatasetGroup
+  xmlns:ns2="urn:mpeg:mpeg-g:metadata:dataset_group:2017" profile="EGA"
+  xmlns:tns="urn:mpeg:mpeg-g:metadata:extension:ega"
+  >
+  <Title>Recurrent Somatic Mutations in CLL</Title>
+  <Type>Cancer Genomics</Type>
+  <Abstract>
+    The Chronic Lymphocytic Leukemia (CLL) Genome Project aims to identify genetic alterations involved in the development and progression of the CLL.
+    The CLL Genome Project, as a contributing member of the International Cancer Genome Consortium (ICGC), has the purposes of creating diagnostic tools, discovering therapeutic targets and developing new strategies that will allow a customized therapy for CLL in order to make it more precise and effective.
+  </Abstract>
+  <ProjectCentre>
+    <ProjectCentreName>Hospital XXX Barcelona</ProjectCentreName>
+  </ProjectCentre>
+  <Description/>
+  <Samples>
+    <Sample>
+      <TaxonId>9606</TaxonId>
+      <Title>CLL Genome Project. RNA-seq Sample: sample4</Title>
+      <Extensions>
+        <Extension>
+          <Type>urn:mpeg:mpeg-g:metadata:extension:ega:SampleType</Type>
+          <tns:EGASampleExtension alias="sample4" center_name="Hospital XXX Barcelona">
+            <SAMPLE_NAME>
+              <COMMON_NAME>Human</COMMON_NAME>
+              <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+            </SAMPLE_NAME>
+            <DESCRIPTION>Chronic Lymphocytic Leukemia RNA_CLL from Ph_Blood of patient CLL-4</DESCRIPTION>
+            <SAMPLE_ATTRIBUTES>
+              <SAMPLE_ATTRIBUTE>
+                <TAG>Sample ID</TAG>
+                <VALUE>sample4</VALUE>
+              </SAMPLE_ATTRIBUTE>
+              <SAMPLE_ATTRIBUTE>
+                <TAG>sample type</TAG>
+                <VALUE>RNA-seq</VALUE>
+              </SAMPLE_ATTRIBUTE>
+              <SAMPLE_ATTRIBUTE>
+                <TAG>Donor ID</TAG>
+                <VALUE>CLL-4</VALUE>
+              </SAMPLE_ATTRIBUTE>
+            </SAMPLE_ATTRIBUTES>
+          </tns:EGASampleExtension>
+        </Extension>
+      </Extensions>
+    </Sample>
+    <Sample>
+      <TaxonId>9606</TaxonId>
+      <Title>CLL Genome Project. RNA-seq Sample: sample5</Title>
+      <Extensions>
+        <Extension>
+          <Type>urn:mpeg:mpeg-g:metadata:extension:ega:SampleType</Type>
+          <tns:EGASampleExtension alias="sample4" center_name="Hospital XXX Barcelona">
+            <SAMPLE_NAME>
+              <COMMON_NAME>Human</COMMON_NAME>
+              <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+            </SAMPLE_NAME>
+            <DESCRIPTION>Chronic Lymphocytic Leukemia RNA_CLL from Ph_Blood of patient CLL-5</DESCRIPTION>
+            <SAMPLE_ATTRIBUTES>
+              <SAMPLE_ATTRIBUTE>
+                <TAG>Sample ID</TAG>
+                <VALUE>sample5</VALUE>
+              </SAMPLE_ATTRIBUTE>
+              <SAMPLE_ATTRIBUTE>
+                <TAG>sample type</TAG>
+                <VALUE>RNA-seq</VALUE>
+              </SAMPLE_ATTRIBUTE>
+              <SAMPLE_ATTRIBUTE>
+                <TAG>Donor ID</TAG>
+                <VALUE>CLL-5</VALUE>
+              </SAMPLE_ATTRIBUTE>
+            </SAMPLE_ATTRIBUTES>
+          </tns:EGASampleExtension>
+        </Extension>
+      </Extensions>
+    </Sample>
+    <Sample>
+      <TaxonId>9606</TaxonId>
+      <Title>CLL Genome Project. RNA-seq Sample: sample6</Title>
+      <Extensions>
+        <Extension>
+          <Type>urn:mpeg:mpeg-g:metadata:extension:ega:SampleType</Type>
+          <tns:EGASampleExtension alias="sample6" center_name="Hospital XXX Barcelona">
+            <SAMPLE_NAME>
+              <COMMON_NAME>Human</COMMON_NAME>
+              <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+            </SAMPLE_NAME>
+            <DESCRIPTION>Chronic Lymphocytic Leukemia RNA_CLL from Ph_Blood of patient CLL-6</DESCRIPTION>
+            <SAMPLE_ATTRIBUTES>
+              <SAMPLE_ATTRIBUTE>
+                <TAG>Sample ID</TAG>
+                <VALUE>sample6</VALUE>
+              </SAMPLE_ATTRIBUTE>
+              <SAMPLE_ATTRIBUTE>
+                <TAG>sample type</TAG>
+                <VALUE>RNA-seq</VALUE>
+              </SAMPLE_ATTRIBUTE>
+              <SAMPLE_ATTRIBUTE>
+                <TAG>Donor ID</TAG>
+                <VALUE>CLL-6</VALUE>
+              </SAMPLE_ATTRIBUTE>
+            </SAMPLE_ATTRIBUTES>
+          </tns:EGASampleExtension>
+        </Extension>
+      </Extensions>
+    </Sample>
+    <Sample >
+      <TaxonId>9606</TaxonId>
+      <Title>CLL Genome Project. RNA-seq Sample: sample7</Title>
+      <Extensions>
+        <Extension>
+          <Type>urn:mpeg:mpeg-g:metadata:extension:ega:SampleType</Type>
+          <tns:EGASampleExtension alias="sample7" center_name="Hospital XXX Barcelona">
+            <SAMPLE_NAME>
+              <COMMON_NAME>Human</COMMON_NAME>
+              <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+            </SAMPLE_NAME>
+            <DESCRIPTION>Chronic Lymphocytic Leukemia RNA_CLL from Ph_Blood of patient CLL-7</DESCRIPTION>
+            <SAMPLE_ATTRIBUTES>
+              <SAMPLE_ATTRIBUTE>
+                <TAG>Sample ID</TAG>
+                <VALUE>sample7</VALUE>
+              </SAMPLE_ATTRIBUTE>
+              <SAMPLE_ATTRIBUTE>
+                <TAG>sample type</TAG>
+                <VALUE>RNA-seq</VALUE>
+              </SAMPLE_ATTRIBUTE>
+              <SAMPLE_ATTRIBUTE>
+                <TAG>Donor ID</TAG>
+                <VALUE>CLL-7</VALUE>
+              </SAMPLE_ATTRIBUTE>
+            </SAMPLE_ATTRIBUTES>
+          </tns:EGASampleExtension>
+        </Extension>
+      </Extensions>
+    </Sample>
+  </Samples>
+  <Extensions>
+    <Extension>
+      <Type>urn:mpeg:mpeg-g:metadata:extension:ega:StudyType</Type>
+      <Inheritable>true</Inheritable>
+      <tns:EGAStudyExtension alias="CLL Genome" center_name="Hospital XXX Barcelona" broker_name="EGA">
+        <DESCRIPTOR>
+          <CENTER_PROJECT_NAME>CLL Genome</CENTER_PROJECT_NAME>
+        </DESCRIPTOR>
+        <STUDY_ATTRIBUTES>
+          <STUDY_ATTRIBUTE>
+            <TAG>Consortium</TAG>
+            <VALUE>ICGC</VALUE>
+          </STUDY_ATTRIBUTE>
+          <STUDY_ATTRIBUTE>
+            <TAG>Consortium Project</TAG>
+            <VALUE>ICGC Cancer Genome Projects</VALUE>
+          </STUDY_ATTRIBUTE>
+        </STUDY_ATTRIBUTES>
+      </tns:EGAStudyExtension>
+    </Extension>
+  </Extensions>
+</ns2:DatasetGroup>

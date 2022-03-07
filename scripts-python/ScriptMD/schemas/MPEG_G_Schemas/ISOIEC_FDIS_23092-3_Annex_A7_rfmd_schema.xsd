@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="urn:mpeg:mpeg-g:reference_metadata:2019"
+    xmlns:rfmd="urn:mpeg:mpeg-g:reference_metadata:2019"
+    elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:import namespace="http://www.w3.org/2001/04/xmlenc#"
+        schemaLocation="https://www.w3.org/TR/xmlenc-core1/xenc-schema.xsd"/>
+    <xs:import namespace="http://www.w3.org/2000/09/xmldsig#"
+        schemaLocation="https://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd#"/>
+    <xs:complexType name="AlternativeLocusType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="chromosome_name"/>
+            <xs:element name="position" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element type="xs:long" name="start"/>
+                        <xs:element type="xs:long" name="end"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="SequenceType">
+        <xs:sequence>
+            <xs:element type="xs:long" name="length"/>
+            <xs:element type="rfmd:AlternativeLocusType" name="alternative_locus" minOccurs="0"/>
+            <xs:element name="alternative_sequence_names" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element type="xs:string" name="alternative_sequence_name" minOccurs="1"
+                            maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element type="xs:string" name="genome_assemblyIDentifier" minOccurs="0"/>
+            <xs:element type="xs:string" name="description" minOccurs="0"/>
+            <xs:element type="xs:string" name="species" minOccurs="0"/>
+            <xs:element type="xs:anyURI" name="URI" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ReferenceType">
+        <xs:sequence>
+            <xs:element type="rfmd:SequenceType" name="reference" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ReferenceMetadata" type="rfmd:ReferenceType"/>
+</xs:schema>

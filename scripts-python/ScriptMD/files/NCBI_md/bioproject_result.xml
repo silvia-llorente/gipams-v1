@@ -1,0 +1,58 @@
+<DocumentSummary uid="244100">
+    <Project>
+        <ProjectID>
+            <ArchiveID accession="PRJNA244100" archive="NCBI" id="244100"/>
+            <CenterID center="dbgapss_spuid" id="0">bp_data_submission_phs000710</CenterID>
+        </ProjectID>
+        <ProjectDescr>
+            <Name>Homo sapiens</Name>
+            <Title>1000 Genomes Used for Cloud Testing</Title>
+            <Description>This study provides public access to a demonstration subset of 1000 genomes sequence data in dbGaP. It is intended to be used by software developers who design, implement and validate pipelines for dbGaP data. While this project distributes only public data, it uses dbGaP security mechanisms which include a project-specific security key and a decryption password. Since the data are public, the key and password for this project will be included by SRA into public demonstration packages that permit users to test and validate the security of their computational pipelines. Note that all public users of this data will be logged under the same project and account ID. The datasets attached to this project must be restricted to 1000 Genomes data identical to the project's public FTP site.</Description>
+            <ExternalLink label="">
+                <dbXREF db="dbGaP">
+                    <ID>phs000710</ID>
+                </dbXREF>
+            </ExternalLink>
+            <Relevance>
+                <Medical>yes</Medical>
+            </Relevance>
+        </ProjectDescr>
+        <ProjectType>
+            <ProjectTypeSubmission>
+                <Target capture="eOther" material="eOther" sample_scope="eMultiisolate">
+                    <Organism species="9606" taxID="9606">
+                        <OrganismName>Homo sapiens</OrganismName>
+                        <Supergroup>eEukaryotes</Supergroup>
+                    </Organism>
+                </Target>
+                <Method method_type="eOther"/>
+                <Objectives>
+                    <Data data_type="ePhenotype"/>
+                </Objectives>
+                <ProjectDataTypeSet>
+                    <DataType>Phenotype or Genotype</DataType>
+                </ProjectDataTypeSet>
+            </ProjectTypeSubmission>
+        </ProjectType>
+    </Project>
+    <Submission submission_id="SUB2328672">
+        <Description>
+            <!-- Submitter information has been removed -->
+            <Organization role="owner" type="institute">
+                <Name>LOUISIANA STATE UNIVERSITY HEALTH SCIENCES CENTER - NEW ORLEANS</Name>
+                <!-- Contact information has been removed -->
+            </Organization>
+            <Access>public</Access>
+        </Description>
+        <Action action_id="SUB2328672-bp_data_submission_phs000710"/>
+    </Submission>
+    <ProjectLinks>
+        <Link>
+            <ProjectIDRef archive="NCBI" id="244100" accession="PRJNA244100"/>
+            <Hierarchical type="TopAdmin">
+                <MemberID archive="NCBI" id="244099" accession="PRJNA244099"/>
+            </Hierarchical>
+        </Link>
+    </ProjectLinks>
+</DocumentSummary>
+

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="urn:mpeg:mpeg-g:metadata_encrypted:dataset:2019"
+    xmlns:dtmd="urn:mpeg:mpeg-g:metadata_encrypted:dataset:2019"
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+    xmlns:de="http://www.w3.org/2001/04/xmlenc#"
+    elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:import namespace="http://www.w3.org/2001/04/xmlenc#"
+        schemaLocation="https://www.w3.org/TR/xmlenc-core1/xenc-schema.xsd"/>
+    <xs:import namespace="http://www.w3.org/2000/09/xmldsig#"
+        schemaLocation="https://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd#"/>
+    <xs:element name="DatasetMetadata" type="dtmd:MetadataType"/>
+    <xs:complexType name="MetadataType">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element name="Title">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="dtmd:TitleString">
+                                <xs:attribute name="id" type="xs:ID"/>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="EncTitle">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="de:EncryptedData"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+            <xs:choice minOccurs="0">
+                <xs:element name="UUID" type="dtmd:UUIDTypeWithID"/>
+                <xs:element name="EncUUID">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="de:EncryptedData"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+            <xs:choice minOccurs="0" maxOccurs="1">
+                <xs:element name="Type">
+                    <xs:complexType>
+                        <xs:attribute name="existing_study_type" use="required">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Whole Genome Sequencing">
+                                        <xs:annotation>
+                                            <xs:documentation> Sequencing of a single organism.
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:enumeration>
+                                    <xs:enumeration value="Metagenomics">
+                                        <xs:annotation>
+                                            <xs:documentation> Sequencing of a community.
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:enumeration>
+                                    <xs:enumeration value="Transcriptome Analysis">
+                                        <xs:annotation>
+                                            <xs:documentation> Sequencing and characterization of
+                                                transcription elements. </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:enumeration>
+                                    <xs:enumeration value="Resequencing">
+                                        <xs:annotation>
+                                            <xs:documentation> Sequencing of a sample with respect
+                                                to a reference. </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:enumeration>
+                                    <xs:enumeration value="Epigenetics">
+                                        <xs:annotation>
+                                            <xs:documentation> Cellular differentiation study.
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:enumeration>
+                                    <xs:enumeration value="Synthetic Genomics">
+                                        <xs:annotation>
+                                            <xs:documentation> Sequencing of modified, synthetic, or
+                                                transplanted genomes. </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:enumeration>
+                                    <xs:enumeration value="Forensic or Paleo-genomics">
+                                        <xs:annotation>
+                                            <xs:documentation> Sequencing of recovered genomic
+                                                material. </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:enumeration>
+                                    <xs:enumeration value="Gene Regulation Study">
+                                        <xs:annotation>
+                                            <xs:documentation> Study of gene expression regulation.
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:enumeration>
+                                    <xs:enumeration value="Cancer Genomics">
+                                        <xs:annotation>
+                                            <xs:documentation> Study of cancer genomics.
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:enumeration>
+                                    <xs:enumeration value="Population Genomics">
+                                        <xs:annotation>
+                                            <xs:documentation> Study of populations and evolution
+                                                through genomics. </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:enumeration>
+                                    <xs:enumeration value="RNASeq">
+                                        <xs:annotation>
+                                            <xs:documentation> RNA sequencing study.
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:enumeration>
+                                    <xs:enumeration value="Exome Sequencing">
+                                        <xs:annotation>
+                                            <xs:documentation> The study investigates the exons of
+                                                the genome. </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:enumeration>
+                                    <xs:enumeration value="Pooled Clone Sequencing">
+                                        <xs:annotation>
+                                            <xs:documentation> The study is sequencing clone pools
+                                                (BACs, fosmids, other constructs).
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:enumeration>
+                                    <xs:enumeration value="Transcriptome Sequencing">
+                                        <xs:annotation>
+                                            <xs:documentation> Sequencing of transcription elements.
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:enumeration>
+                                    <xs:enumeration value="Other">
+                                        <xs:annotation>
+                                            <xs:documentation> Study type not listed.
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:enumeration>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                        <xs:attribute name="new_study_type" use="optional" type="xs:string"/>
+                        <xs:attribute name="id" type="xs:ID"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="EncType">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="de:EncryptedData"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+            <xs:choice minOccurs="0" maxOccurs="1">
+                <xs:element name="Abstract">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="dtmd:AbstractString">
+                                <xs:attribute name="id" type="xs:ID"/>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="EncAbstract">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="de:EncryptedData"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+            <xs:choice minOccurs="0" maxOccurs="1">
+                <xs:element name="ProjectCentre" type="dtmd:ProjectCentreType"/>
+                <xs:element name="EncProjectCentre">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="de:EncryptedData"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+            <xs:choice minOccurs="0" maxOccurs="1">
+                <xs:element name="Description">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="dtmd:DescriptionString">
+                                <xs:attribute name="id" type="xs:ID"/>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="EncDescription">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="de:EncryptedData"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+            <xs:element name="Samples" type="dtmd:SamplesType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="Extensions" type="dtmd:ExtensionsType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="Signatures" type="dtmd:SignaturesType" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="profile" type="xs:anyURI" use="optional"/>
+    </xs:complexType>
+    <xs:simpleType name="TitleString">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="128"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="AbstractString">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="1024"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="DescriptionString">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="1024"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="ProjectCentreType">
+        <xs:sequence>
+            <xs:element name="ProjectCentreName">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="128"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="Extensions" type="dtmd:ChildExtensionsType" minOccurs="0"
+                maxOccurs="1"/>
+            <xs:element ref="ds:Signature" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+    <xs:complexType name="ChildExtensionType">
+        <xs:sequence>
+            <xs:element name="Type" type="xs:anyURI"/>
+            <xs:any minOccurs="1"/>
+            <xs:element name="Documentation" type="xs:anyURI" minOccurs="0"/>
+            <xs:element ref="ds:Signature" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+    <xs:complexType name="ChildExtensionsType">
+        <xs:sequence>
+            <xs:element name="Extension" type="dtmd:ChildExtensionType" minOccurs="0"
+                maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ExtensionType">
+        <xs:sequence>
+            <xs:element name="Type" type="xs:anyURI"/>
+            <xs:element name="Documentation" type="xs:anyURI" minOccurs="0"/>
+            <xs:element name="Inheritable" type="xs:boolean"/>
+            <xs:any minOccurs="1"/>
+            <xs:element ref="ds:Signature" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+    <xs:complexType name="SignaturesType">
+        <xs:sequence>
+            <xs:element ref="ds:Signature" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="SamplesType">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="Sample" type="dtmd:SampleType"/>
+                <xs:element ref="de:EncryptedData"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ExtensionsType">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="Extension" type="dtmd:ExtensionType"/>
+                <xs:element ref="de:EncryptedData"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="SampleType">
+        <xs:sequence>
+            <xs:element name="TaxonId" type="xs:int" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="UUID" type="dtmd:UUIDTypeWithID" minOccurs="0"/>
+            <xs:element name="Title">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="128"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="Extensions" type="dtmd:ChildExtensionsType" minOccurs="0"
+                maxOccurs="1"/>
+            <xs:element ref="ds:Signature" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID"/>
+    </xs:complexType>
+    <xs:simpleType name="UUIDType">
+        <xs:restriction base="xs:string">
+            <xs:length value="36" fixed="true"/>
+            <xs:pattern
+                value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"
+            />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="UUIDTypeWithID">
+        <xs:simpleContent>
+            <xs:extension base="dtmd:UUIDType">
+                <xs:attribute name="id" type="xs:ID"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+</xs:schema>

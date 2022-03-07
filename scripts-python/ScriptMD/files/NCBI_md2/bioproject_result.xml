@@ -1,0 +1,43 @@
+<DocumentSummary uid="701725">
+    <Project>
+        <ProjectID>
+            <ArchiveID accession="PRJNA701725" archive="NCBI" id="701725"/>
+            <LocalID>bp0</LocalID>
+            <LocalID>bp0</LocalID>
+        </ProjectID>
+        <ProjectDescr>
+            <Title>Clonal expansion and activation of tissue-resident memory-like Th17 cells expressing GM-CSF in the lung of severe COVID-19 patients</Title>
+            <Description>Hyperinflammation contributes to lung injury and subsequent acute respiratory distress syndrome (ARDS) with high mortality in severe COVID-19. To understand the underlying mechanisms, we investigated the role of the lung-specific immune response. Here we profiled lymphocytes and myeloid cells in the bronchoalveolar lavage (BAL) fluid and blood of COVID-19 patients. By tracking T cell clones across tissues, we identified clonally expanded tissue-resident memory-like Th17 cells (Trm17 cells) in the lung even after viral clearance. These Trm17 cells are characterized by a potentially pathogenic cytokine profile with expression of IL17A and CSF2 (GM-CSF). Interactome analysis revealed that Trm17 cells interact with macrophages and cytotoxic CD8+ T cells, which have been associated with disease severity and lung damage. High IL-17A and GM-CSF protein levels in the serum of COVID-19 patients correlated with severe clinical course. This study suggests pulmonary Trm17 cells as one of the orchestrators of the hyperinflammation in severe COVID-19 and that these cells and their cytokines, such as GM-CSF, are promising biomarkers and potential targets for a COVID-19 therapy.</Description>
+            <Relevance>
+                <Medical>yes</Medical>
+            </Relevance>
+        </ProjectDescr>
+        <ProjectType>
+            <ProjectTypeSubmission>
+                <Target capture="eWhole" material="eGenome" sample_scope="eMultispecies"/>
+                <Method method_type="eSequencing"/>
+                <Objectives>
+                    <Data data_type="eRawSequenceReads"/>
+                </Objectives>
+                <IntendedDataTypeSet>
+                    <DataType>raw sequence reads</DataType>
+                </IntendedDataTypeSet>
+                <ProjectDataTypeSet>
+                    <DataType>raw sequence reads</DataType>
+                </ProjectDataTypeSet>
+            </ProjectTypeSubmission>
+        </ProjectType>
+    </Project>
+    <Submission last_update="2021-02-13" submission_id="SUB9063495" submitted="2021-02-13">
+        <Description>
+            <!-- Submitter information has been removed -->
+            <Organization role="owner" type="institute">
+                <Name>University Medical Center Hamburg-Eppendorf</Name>
+                <!-- Contact information has been removed -->
+            </Organization>
+            <Access>public</Access>
+        </Description>
+        <Action action_id="SUB9063495-bp0"/>
+    </Submission>
+</DocumentSummary>
+
