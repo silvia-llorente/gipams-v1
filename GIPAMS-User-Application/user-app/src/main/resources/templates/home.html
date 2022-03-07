@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+<nav>
+    <div class="nav-wrapper blue darken-1">
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a href="/">Home</a></li>
+            <li><a href="/addFile" class="collection-item">Add file</a></li>
+            <li><a href="/ownFiles">Own files</a></li>
+            <li><a href="/searchDatasetGroup">Search Dataset Group</a></li>
+            <li><a href="/searchDataset">Search Dataset</a></li>
+        </ul>
+        <ul id="nav-mobile2" class="right hide-on-med-and-down">
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+<div id="links" class="section scrollspy">
+    <div class="row">
+        <div class="col s12">
+            <h2 th:text="'Hello, ' + ${username} + '!'"></h2>
+            <h3 class="header">Menu</h3>
+            <div class="collection">
+                <a href="/addFile" class="collection-item">Add file</a>
+                <a href="/ownFiles" class="collection-item">Own files</a>
+                <a href="/searchDatasetGroup" class="collection-item">Search Dataset Group</a>
+                <a href="/searchDataset" class="collection-item">Search Dataset</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
