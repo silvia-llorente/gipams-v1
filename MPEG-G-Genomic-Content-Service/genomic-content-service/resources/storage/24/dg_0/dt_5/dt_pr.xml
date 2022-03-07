@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Policy xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17 http://docs.oasis-open.org/xacml/3.0/xacml-core-v3-schema-wd-17.xsd" PolicyId="urn:isdcm:policyid:1" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:first-applicable" Version="1.0">
+    <Description> Restrictive DatasetGroup policy </Description>
+    <Target />
+    <Rule RuleId="urn:oasis:names:tc:xacml:2.0:ejemplo:RuleMed" Effect="Permit">
+        <Description>Read actions allowed for researcher</Description>
+        <Target>
+            <AnyOf>
+                <AllOf>
+                    <!-- Which kind of user: researcher -->
+                    <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">researcher</AttributeValue>
+                        <AttributeDesignator MustBePresent="false" Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject" AttributeId="urn:oasis:names:tc:xacml:3.0:example:attribute:role" DataType="http://www.w3.org/2001/XMLSchema#string" />
+                    </Match>
+                </AllOf>
+            </AnyOf>
+        </Target>
+        <Condition>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:date-less-than-or-equal">
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:date-one-and-only">
+                        <AttributeDesignator MustBePresent="true" Category="urn:oasis:names:tc:xacml:3.0:date" AttributeId="accessDate" DataType="http://www.w3.org/2001/XMLSchema#date" />
+                    </Apply>
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#date">2021-01-01</AttributeValue>
+                </Apply>
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                            <AttributeDesignator MustBePresent="true" Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action" AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" DataType="http://www.w3.org/2001/XMLSchema#string" />
+                        </Apply>
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">GetProtectionDataset</AttributeValue>
+                    </Apply>
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                            <AttributeDesignator MustBePresent="true" Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action" AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" DataType="http://www.w3.org/2001/XMLSchema#string" />
+                        </Apply>
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">GetMetadataDataset</AttributeValue>
+                    </Apply>
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                            <AttributeDesignator MustBePresent="true" Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action" AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" DataType="http://www.w3.org/2001/XMLSchema#string" />
+                        </Apply>
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">GetIdDataset</AttributeValue>
+                    </Apply>
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                            <AttributeDesignator MustBePresent="true" Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action" AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" DataType="http://www.w3.org/2001/XMLSchema#string" />
+                        </Apply>
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">GetProtectionDatasetGroup</AttributeValue>
+                    </Apply>
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                            <AttributeDesignator MustBePresent="true" Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action" AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" DataType="http://www.w3.org/2001/XMLSchema#string" />
+                        </Apply>
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">GetMetadataDatasetGroup</AttributeValue>
+                    </Apply>
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                            <AttributeDesignator MustBePresent="true" Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action" AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" DataType="http://www.w3.org/2001/XMLSchema#string" />
+                        </Apply>
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">GetIdDatasetGroup</AttributeValue>
+                    </Apply>
+                </Apply>
+            </Apply>
+        </Condition>
+    </Rule>
+    <Rule RuleId="urn:oasis:names:tc:xacml:2.0:ejemplo:RuleGen" Effect="Permit">
+        <Description>Metadata read actions allowed for practitioner
+        </Description>
+        <Target>
+            <AnyOf>
+                <AllOf>
+                    <!-- Which kind of user: practitioner -->
+                    <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">practitioner</AttributeValue>
+                        <AttributeDesignator MustBePresent="true" Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject" AttributeId="urn:oasis:names:tc:xacml:3.0:example:attribute:role" DataType="http://www.w3.org/2001/XMLSchema#string" />
+                    </Match>
+                </AllOf>
+            </AnyOf>
+        </Target>
+        <Condition>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:date-less-than-or-equal">
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:date-one-and-only">
+                        <AttributeDesignator MustBePresent="true" Category="urn:oasis:names:tc:xacml:3.0:date" AttributeId="accessDate" DataType="http://www.w3.org/2001/XMLSchema#date" />
+                    </Apply>
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#date">2021-01-01</AttributeValue>
+                </Apply>
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                            <AttributeDesignator MustBePresent="true" Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action" AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" DataType="http://www.w3.org/2001/XMLSchema#string" />
+                        </Apply>
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">GetMetadataDataset</AttributeValue>
+                    </Apply>
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                            <AttributeDesignator MustBePresent="true" Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action" AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" DataType="http://www.w3.org/2001/XMLSchema#string" />
+                        </Apply>
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">GetIdDataset</AttributeValue>
+                    </Apply>
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                            <AttributeDesignator MustBePresent="true" Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action" AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" DataType="http://www.w3.org/2001/XMLSchema#string" />
+                        </Apply>
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">GetMetadataDatasetGroup</AttributeValue>
+                    </Apply>
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                            <AttributeDesignator MustBePresent="true" Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action" AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" DataType="http://www.w3.org/2001/XMLSchema#string" />
+                        </Apply>
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">GetIdDatasetGroup</AttributeValue>
+                    </Apply>
+                </Apply>
+            </Apply>
+        </Condition>
+    </Rule>
+    <Rule RuleId="urn:oasis:names:tc:xacml:2.0:ejemplo:RuleDeny" Effect="Deny" />
+</Policy>
